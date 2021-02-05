@@ -2,6 +2,7 @@ import RPi.GPIO as gpio
 
 class Actuador:
 
+    estado = false
 
     def __init__(self, id, pin):
         gpio.setmode(gpio.BOARD)
@@ -10,10 +11,11 @@ class Actuador:
         self.pin = pin
 
 
+
     def ActivarActuador(self):
         gpio.output(pin, True)
+        self.estado=True
 
-    def DesActivarActuador(self):
+    def DesactivarActuador(self):
         gpio.output(pin, False)
-
-        
+        self.estado=False
