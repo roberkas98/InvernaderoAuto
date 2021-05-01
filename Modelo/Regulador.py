@@ -1,7 +1,7 @@
-class Main:
+class Regulador:
 
 
-invernaderos = []
+
 
     def RegularInvernadero(invernadero):
         temperatura, presion, humedad = invernadero.sensor_temp.readBME280All()
@@ -9,13 +9,11 @@ invernaderos = []
             invernadero.actuador_enfriar.ActivarActuador()
         if(invernadero.consigna_temp<temperatura-1):
             invernadero.actuador_calentar.ActivarActuador()
-        if(round(invernadero.consigna_temp)==round(temperatura):
+        if(round(invernadero.consigna_temp)==round(temperatura)):
             invernadero.actuador_enfriar.DesactivarActuador()
             invernadero.actuador_calentar.DesactivarActuador()
-        if()
 
 
 
 
 
-#

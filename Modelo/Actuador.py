@@ -1,21 +1,24 @@
-import RPi.GPIO as gpio
+import OPi.GPIO as gpio
 
 class Actuador:
 
     estado = false
 
     def __init__(self, id, pin):
-        gpio.setmode(gpio.BOARD)
-        gpio.setup(pin, gpio.OUT)
+        #añadir  restricciones de rwepeticion de pines
         self.id = id
         self.pin = pin
+        gpio.setbopard(PC2)
+        gpio.setmode(gpio.BOARD)
+        gpio.setup(pin, gpio.OUT)
 
 
 
     def ActivarActuador(self):
-        gpio.output(pin, True)
         self.estado=True
+        gpio.output(pin, gpio.HIGH)
 
     def DesactivarActuador(self):
-        gpio.output(pin, False)
         self.estado=False
+        gpio.output(pin, gpio.LOW)
+
