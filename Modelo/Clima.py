@@ -14,3 +14,4 @@ class Clima:
         self.consigna_hum_rel = hum
         self.consigna_humedad_suelo = hum_suelo
 
+	
