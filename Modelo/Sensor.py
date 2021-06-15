@@ -1,4 +1,4 @@
-import RPi.GPIO as gpio
+import OPi.GPIO as gpio
 
 
 class Sensor:

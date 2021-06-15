@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Modelo",
-    "\\Modelo\\Sensores"
+    "\\Modelo"
   ],
-  "SelectedNode": "\\Modelo\\Actuador.py",
+  "SelectedNode": "\\Modelo\\Main.py",
   "PreviewInSolutionExplorer": false
 }
