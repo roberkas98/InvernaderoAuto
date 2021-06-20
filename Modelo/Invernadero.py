@@ -9,10 +9,13 @@ class Invernadero:
     frec_sampleo = 60 #segundos entre lecturas del sensor
     sensor_humedad_rel = SensorBMP280
     sensor_temp = SensorBMP280
-    #actuador_calentar = null
-    actuador_enfriar = Actuador
-    #actuador_ventilar = null
+    actuador_calentar = None
+    actuador_ventilar = None
+    actuador_humidificar = None
     AreasRiego = [AreaRiego]
+    iluminacion = False
+    actuador_iluminacion = Actuador
+    horas_luz = 12
 
 
 
@@ -29,14 +32,44 @@ class Invernadero:
         self.clima=Clima
 
     def RegularInvernadero(self):
-		
-        temperatura, presion, humedad = self.sensor_temp.readBME280All()
-        print(temperatura, presion, humedad)
-        if(self.clima.consigna_temp<temperatura+1):
-            self.actuador_enfriar.ActivarActuador()
-        if(self.clima.consigna_temp>temperatura-1):
-             #self.actuador_calentar.ActivarActuador()
-             pass
+        if(actuador_calentar == None and actuador_ventilar != None and actuador_humidicar == None):  #Caso 1 regulacion. 1 sensor temperatura/humedad 1 actuador ventilar
+            temperatura, presion, humedad = self.sensor_temp.readBME280All()
+            print(temperatura, presion, humedad)
+            if(self.clima.max_temp<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+            if(self.clima.hum_max<humedad and self.clima.temperatura_min<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+        
+        if(actuador_calentar == None and actuador_ventilar != None and actuador_humidicar != None): #Caso 2 regulacion. 1 sensor temperatura/humedad 1 actuador ventilar y 1 actuador humidificador 
+            temperatura, presion, humedad = self.sensor_temp.readBME280All()
+            print(temperatura, presion, humedad)
+            if(self.clima.max_temp<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+            if(self.clima.hum_max<humedad and self.clima.temperatura_min<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+            if(self.clima.hum_min>humedad):
+                self.actuador_humidificar.ActivarActuador()
+
+
+        if(actuador_calentar != None and actuador_ventilar != None and actuador_humidicar != None): #Caso 3 regulacion. 1 sensor temperatura/humedad 1 actuador ventilar, 1 actuador humidificador, 1 calefactor
+            temperatura, presion, humedad = self.sensor_temp.readBME280All()
+            print(temperatura, presion, humedad)
+            if(self.clima.max_temp<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+            if(self.clima.min_temp>temperatura):
+                self.actuador_calentar.ActivarActuador()
+            if(self.clima.hum_max<humedad and self.clima.temperatura_min<temperatura):
+                self.actuador_ventilar.ActivarActuador()
+            if(self.clima.hum_min>humedad):
+                self.actuador_humidificar.ActivarActuador()
+
+
         if(round(self.clima.consigna_temp)==round(temperatura)):
-            self.actuador_enfriar.DesactivarActuador()
             self.actuador_calentar.DesactivarActuador()
+        if(self.clima.consigna_hum>humedad and self.clima.temp_max>temperatura):
+            self.actuador_ventilar.DesactivarActuador()
+        if(self.clima.consigna_hum==humedad or self.clima.consigna_hum<humedad):
+            self.actuador_humidificar.DesactivarActuador()
+
+    def anadirAreaRiego():
+

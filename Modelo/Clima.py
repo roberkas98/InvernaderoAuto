@@ -2,7 +2,11 @@
 class Clima:
     nombre = ""
     consigna_temp = 20.0
+    max_temp = 22
+    min_temp = 15
     consigna_hum_rel = 70
+    hum_rel_min = 30
+    hum_rel_max = 80
     
 
     def __init__(self, nombre):
