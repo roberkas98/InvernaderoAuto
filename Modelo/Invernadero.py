@@ -4,7 +4,8 @@ from Actuador import Actuador
 from AreaRiego import AreaRiego
 
 class Invernadero:
-    id = ""
+    id = 00
+    nombre = ""
     clima = Clima
     frec_sampleo = 60 #segundos entre lecturas del sensor
     sensor_humedad_rel = SensorBMP280
@@ -71,5 +72,11 @@ class Invernadero:
         if(self.clima.consigna_hum==humedad or self.clima.consigna_hum<humedad):
             self.actuador_humidificar.DesactivarActuador()
 
-    def anadirAreaRiego():
+    def anadirAreaRiego(AreaRiego):
+        self.AreasRiego.append(AreaRiego)
+
+    def eliminarAreaRiego(id):
+        for x in len(self.AreasRiego):
+            if self.AreasRiego[x].id==id:
+                AreasRiego.pop(x)
 

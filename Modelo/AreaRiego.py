@@ -5,7 +5,8 @@ from SensorBMP280 import SensorBMP280
 
 
 class AreaRiego:
-    id = ""
+    id = 00
+    nombre = ""
     sensorHumedad_1 = Sensor
     sensorHumedad_2 = Sensor
     actuadorRiego = Actuador

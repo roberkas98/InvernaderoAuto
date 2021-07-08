@@ -1,5 +1,6 @@
 
 class Clima:
+    id = 00
     nombre = ""
     consigna_temp = 20.0
     max_temp = 22

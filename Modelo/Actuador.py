@@ -3,14 +3,17 @@ import OPi.GPIO as gpio
 
 class Actuador:
 
+    id = 00
+    nombre = ""
+    pin = 00
     estado = False
 
     def __init__(self, id, pin):
         #anadir  restricciones de rwepeticion de pines
         self.id = id
         self.pin = pin
-        gpio.setboard(gpio.PC2)
-        gpio.setmode(gpio.BCM)
+        gpio.setboard(gpio.PC2) #Hay que cambiarlo si migramos a otra placa
+        gpio.setmode(gpio.BCM) #Define como nos refermos a los pines de la placa
         gpio.setup(pin, gpio.OUT)
 
 

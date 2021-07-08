@@ -23,3 +23,4 @@ class BD:
             con.close
         except Error:
             print(Error)
+
