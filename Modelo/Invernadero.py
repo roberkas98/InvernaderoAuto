@@ -2,14 +2,14 @@ from Clima import Clima
 from SensorBMP280 import SensorBMP280
 from Actuador import Actuador
 from AreaRiego import AreaRiego
+from ModuloSensores import ModuloSensores
 
 class Invernadero:
     id = 00
     nombre = ""
     clima = Clima
     frec_sampleo = 60 #segundos entre lecturas del sensor
-    sensor_humedad_rel = SensorBMP280
-    sensor_temp = SensorBMP280
+    moduloSensores = ModuloSensores
     actuador_calentar = None
     actuador_ventilar = None
     actuador_humidificar = None
