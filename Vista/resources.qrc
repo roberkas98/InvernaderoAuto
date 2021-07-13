@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="images">
+    <file>1.jpg</file>
+  </qresource>
+  <qresource prefix="estilos">
+    <file>estilos/Incrypt.qss</file>
+  </qresource>
+</RCC>
