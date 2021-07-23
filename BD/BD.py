@@ -1,6 +1,8 @@
 import sqlite3
-
 from sqlite3 import Error
+
+
+
 
 class BD:
     con = sqlite3
@@ -14,8 +16,6 @@ class BD:
         except Error:
             print(Error)
 
-        finally:
-            con.close()
 
 
     def sql_con_close():

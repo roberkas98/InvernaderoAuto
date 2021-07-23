@@ -505,8 +505,8 @@ QComboBox{
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>173</x>
-     <y>53</y>
+     <x>175</x>
+     <y>7</y>
      <width>161</width>
      <height>51</height>
     </rect>
@@ -519,7 +519,7 @@ QComboBox{
    <property name="geometry">
     <rect>
      <x>343</x>
-     <y>63</y>
+     <y>21</y>
      <width>191</width>
      <height>31</height>
     </rect>
@@ -528,10 +528,10 @@ QComboBox{
   <widget class="QGroupBox" name="areasRiego">
    <property name="geometry">
     <rect>
-     <x>186</x>
-     <y>119</y>
+     <x>189</x>
+     <y>98</y>
      <width>379</width>
-     <height>211</height>
+     <height>288</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -596,8 +596,8 @@ QComboBox{
    <widget class="QComboBox" name="cbSensorMaster">
     <property name="geometry">
      <rect>
-      <x>142</x>
-      <y>108</y>
+      <x>140</x>
+      <y>154</y>
       <width>232</width>
       <height>22</height>
      </rect>
@@ -609,8 +609,8 @@ QComboBox{
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
-      <x>7</x>
-      <y>109</y>
+      <x>5</x>
+      <y>155</y>
       <width>120</width>
       <height>21</height>
      </rect>
@@ -627,8 +627,8 @@ QComboBox{
    <widget class="QComboBox" name="cbSensorEsclavo">
     <property name="geometry">
      <rect>
-      <x>142</x>
-      <y>138</y>
+      <x>140</x>
+      <y>189</y>
       <width>232</width>
       <height>22</height>
      </rect>
@@ -638,7 +638,7 @@ QComboBox{
     <property name="geometry">
      <rect>
       <x>7</x>
-      <y>139</y>
+      <y>189</y>
       <width>127</width>
       <height>21</height>
      </rect>
@@ -650,8 +650,8 @@ QComboBox{
    <widget class="QComboBox" name="cbActuadorRiego">
     <property name="geometry">
      <rect>
-      <x>142</x>
-      <y>168</y>
+      <x>140</x>
+      <y>224</y>
       <width>232</width>
       <height>22</height>
      </rect>
@@ -660,8 +660,8 @@ QComboBox{
    <widget class="QLabel" name="label_8">
     <property name="geometry">
      <rect>
-      <x>7</x>
-      <y>161</y>
+      <x>5</x>
+      <y>217</y>
       <width>134</width>
       <height>31</height>
      </rect>
@@ -675,9 +675,9 @@ QComboBox{
    <property name="geometry">
     <rect>
      <x>572</x>
-     <y>119</y>
+     <y>98</y>
      <width>218</width>
-     <height>211</height>
+     <height>288</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -722,6 +722,16 @@ QComboBox{
      </widget>
     </item>
     <item>
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Humidificador:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cbActuadorHumidificador"/>
+    </item>
+    <item>
      <widget class="QLabel" name="label_12">
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Calefaccion:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -737,9 +747,9 @@ QComboBox{
    <property name="geometry">
     <rect>
      <x>7</x>
-     <y>119</y>
+     <y>98</y>
      <width>176</width>
-     <height>211</height>
+     <height>288</height>
     </rect>
    </property>
    <property name="autoFillBackground">
@@ -761,40 +771,11 @@ QComboBox{
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Humedad:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="consignaTemperatura">
-    <property name="geometry">
-     <rect>
-      <x>13</x>
-      <y>53</y>
-      <width>143</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true"/>
-    </property>
-   </widget>
    <widget class="QSpinBox" name="areaRiego">
     <property name="geometry">
      <rect>
       <x>13</x>
       <y>184</y>
-      <width>143</width>
-      <height>18</height>
-     </rect>
-    </property>
-    <property name="maximum">
-     <number>100</number>
-    </property>
-    <property name="singleStep">
-     <number>5</number>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="consignaHumedad">
-    <property name="geometry">
-     <rect>
-      <x>13</x>
-      <y>119</y>
       <width>143</width>
       <height>18</height>
      </rect>
@@ -836,6 +817,32 @@ QComboBox{
     </property>
     <property name="text">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Temperatura:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>56</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider_2">
+    <property name="geometry">
+     <rect>
+      <x>7</x>
+      <y>105</y>
+      <width>160</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
     </property>
    </widget>
   </widget>
