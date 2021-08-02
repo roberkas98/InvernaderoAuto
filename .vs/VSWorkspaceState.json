@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\BD",
     "\\Modelo"
   ],
-  "SelectedNode": "\\Modelo\\Main.py",
+  "SelectedNode": "\\BD\\tablaActuadores.py",
   "PreviewInSolutionExplorer": false
 }

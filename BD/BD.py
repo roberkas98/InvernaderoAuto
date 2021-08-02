@@ -5,7 +5,8 @@ from sqlite3 import Error
 
 
 class BD:
-    con = sqlite3
+
+    @staticmethod
     def sql_connection():
 
         try:
@@ -17,10 +18,10 @@ class BD:
             print(Error)
 
 
-
-    def sql_con_close():
+    @staticmethod
+    def sql_con_close(con):
         try:
-            con.close
+            con.close()
         except Error:
             print(Error)
 
