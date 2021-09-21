@@ -4,6 +4,7 @@ from sqlite3 import Error
 
 
 
+
 class BD:
 
     @staticmethod
