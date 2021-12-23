@@ -1,0 +1,12 @@
+<RCC>
+  <qresource prefix="Iconos">
+    <file>grafica.png</file>
+    <file>hum.png</file>
+    <file>temp.png</file>
+    <file>data_log.png</file>
+    <file>filtro.png</file>
+    <file>icono.png</file>
+	<file>menu_lienas.png</file>
+    <file>icono_granja.png</file>
+  </qresource>
+</RCC>

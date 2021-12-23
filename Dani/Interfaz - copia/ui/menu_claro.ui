@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Rober y Dani Company</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+/*-----QWidget-----*/
+QWidget
+{
+	background-color: #ffffff;
+	color: #fff;
+	selection-background-color: #3066c9;
+	selection-color: #000;
+
+}
+
+/*-----QPushButton-----*/
+QPushButton {
+	margin-right:40px;
+	margin-left:40px;
+    color: #333;
+    border: 0px solid #555;
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #fff, stop: 1 #888
+        );
+    padding: 5px;
+    }
+
+QPushButton:hover {
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 0.15, stop: 0 #fff, stop: 1 #bbb
+        );
+    }
+
+QPushButton:pressed {
+    border-style: inset;
+    background: qradialgradient(
+        cx: 0.4, cy: -0.1, fx: 0.4, fy: -0.1,
+        radius: 1.35, stop: 0 #fff, stop: 1 #ddd
+        );
+    }
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>771</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="Layout_2"/>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>771</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="Layout_1">
+     <item>
+      <widget class="QComboBox" name="Combo_invernadero_actual">
+       <property name="minimumSize">
+        <size>
+         <width>300</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="currentText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="butttemp">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>iconos/temp.png</normaloff>iconos/temp.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttgen">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>iconos/grafica.png</normaloff>iconos/grafica.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buthum">
+       <property name="minimumSize">
+        <size>
+         <width>138</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>iconos/hum.png</normaloff>iconos/hum.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPushButton" name="buttdatalog">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>390</y>
+      <width>126</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>iconos/data_log.png</normaloff>iconos/data_log.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>32</width>
+      <height>32</height>
+     </size>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMen">
+    <property name="title">
+     <string>Menú</string>
+    </property>
+    <widget class="QMenu" name="menuInvernaderos">
+     <property name="title">
+      <string>Invernaderos</string>
+     </property>
+     <addaction name="actionA_adir_4"/>
+     <addaction name="actionModificar"/>
+     <addaction name="actionEliminar_4"/>
+    </widget>
+    <widget class="QMenu" name="menuActuadores">
+     <property name="title">
+      <string>Actuadores</string>
+     </property>
+     <addaction name="actionA_adir_6"/>
+     <addaction name="actionEliminar_6"/>
+     <addaction name="actionEliminar_7"/>
+    </widget>
+    <widget class="QMenu" name="menuSensores">
+     <property name="title">
+      <string>Sensores</string>
+     </property>
+     <addaction name="actionA_adir_5"/>
+     <addaction name="actionModificar_2"/>
+     <addaction name="actionEliminar_5"/>
+    </widget>
+    <addaction name="menuInvernaderos"/>
+    <addaction name="menuSensores"/>
+    <addaction name="menuActuadores"/>
+    <addaction name="separator"/>
+    <addaction name="actionConfiguraci_n"/>
+    <addaction name="actionSalir_2"/>
+   </widget>
+   <addaction name="menuMen"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionConfiguraci">
+   <property name="text">
+    <string>Configuración</string>
+   </property>
+  </action>
+  <action name="actionA_adir">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionA_adir_2">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionA_adir_3">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionEliminar">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionEliminar_2">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionEliminar_3">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionSalir_2">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionConfiguraci_n">
+   <property name="text">
+    <string>Configuración</string>
+   </property>
+  </action>
+  <action name="actionA_adir_4">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionModificar">
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionEliminar_4">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionA_adir_5">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionModificar_2">
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionEliminar_5">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+  <action name="actionA_adir_6">
+   <property name="text">
+    <string>Añadir</string>
+   </property>
+  </action>
+  <action name="actionEliminar_6">
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+  </action>
+  <action name="actionEliminar_7">
+   <property name="text">
+    <string>Eliminar</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../iconos/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>
