@@ -36,17 +36,18 @@ class Pantalla(QWidget):
 
 
     def __init__(self):
-        pantalla_inicial="menu"
+        pantalla_inicial="home"
         QWidget.__init__(self)
 
         self.ui_nom_ant=pantalla_inicial#Guardará siempre el nombre la pantalla en la que estemos o en la anterior en la que hayamos estado
         self.ui_nom = pantalla_inicial#Guardará siempre el nombre de la pantalla en la que estemos o a la que queramos ir
         self.ui = QWidget()#Inicializamos en un QWidget genérico
         self.ui0 = QWidget()
-        self.qss =  "qss/"+pantalla_inicial+".qss"#Contendrá el directorio de la hoja de estilos qss actual o la que se quiera utilizar
+        self.qss =  "qss/"+self.ui_nom+".qss"#Contendrá el directorio de la hoja de estilos qss actual o la que se quiera utilizar
         
         self.dic = {
 
+        "home":{"ui":"ui/home.ui","qss":"qss/home.qss"},
         "menu":{"ui":"ui/menu_oscuro.ui","qss":"qss/menu.qss"},
         "ajustes_generales":{"ui":"ui/ajustes_generales.ui","qss":"qss/ajustes_generales.qss"},
         "data_log":{"ui":"ui/data_log.ui","qss":"qss/data_log_2.qss"},
